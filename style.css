@@ -9,8 +9,9 @@ body {
 	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
-	background: linear-gradient(to bottom right, gainsboro, #FFFDD0);
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background: linear-gradient(to bottom right, gainsboro, #fffdd0);
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body > children {
@@ -29,16 +30,6 @@ header {
 	bottom: calc(100vh - 8vh);
 }
 
-footer {
-	display: flex;
-	flex-direction: row;
-	border-top: 6px solid black;
-	justify-content: center;
-	justify-self: center;
-	height: 8vh;
-    top: calc(100vh - 8vh);
-}
-
 .navbar {
 	height: 100%; /* 100% Full-height */
 	width: 0; /* 0 width - change this with JavaScript */
@@ -50,43 +41,44 @@ footer {
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 60px;
 	transition: 0.5s; /* 0.5 second transition */
-  }
+}
 
-  .navbar a {
+.navbar a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
-  }
-  
-  .navbar a:hover {
-	color: #f1f1f1;
-  }
+}
 
-  .navbar .closebtn {
+.navbar a:hover {
+	color: #f1f1f1;
+}
+
+.navbar .closebtn {
 	position: absolute;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
-  }
+}
 
-  #welcome-msg {
+#welcome-msg {
 	font-size: 16px;
 	opacity: 0.4;
-  }
+}
 
-  @media screen and (max-height: 450px) { 
+@media screen and (max-height: 450px) {
 	/* For when dimensions too small */
-  }
+}
 
 .carousel {
 	margin: 1rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 	flex: 1;
 	position: relative;
 	overflow: hidden;
@@ -118,30 +110,44 @@ footer {
 	bottom: 0;
 	margin: auto;
 	padding: 0;
-	
+
 	height: 4rem;
 	width: 2rem;
 	font-size: 3rem;
-	
+
 	cursor: pointer;
-	opacity: 0.5;
+	opacity: 0.4;
 	background-color: aquamarine;
 	border: none;
-	
-	transition: ease-out opacity 100ms;
+
+	transition: ease-out opacity 200ms;
 }
 
-.arrow:hover, .arrow:focus {
+.arrow:hover,
+.arrow:focus {
 	opacity: 1;
 }
 
-left {
+.left {
 	left: 0;
 	padding-left: 0.2rem;
+	border-radius: 0 100% 100% 0;
+	align-self: flex-start;
+	justify-self: flex-start;
 }
 
-right {
+.right {
 	right: 0;
-	padding-right: 0.2rem;
+	padding-left: 0.2rem;
 	border-radius: 100% 0 0 100%;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	border-top: 6px solid black;
+	justify-content: center;
+	justify-self: center;
+	height: 8vh;
+	top: calc(100vh - 8vh);
 }
