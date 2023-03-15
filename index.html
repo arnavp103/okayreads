@@ -4,25 +4,43 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>=Okayreads</title>
-	<link rel="stylesheet" href="css/style.css">
+	<title>Okayreads</title>
+	<link rel="stylesheet" href="style.css">
 	<script defer src="script.js"></script>
 </head>
 <body>
-	<header>
-
+	<header class="sticky">
+		<button class="navbarbtn" onclick="openNav()"></button>
 	</header>
 
 	<main>
-		<div class="carousel">
-			<button class="book" ></button>
+		<div id="navBar" class="navbar">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href=".">Home</a>
+			<a href="#">Reviews</a>
+			<a href="#">Admin</a> <!-- Only appears if login name is "admin" -->
+			<a href="#">Logout</a> <!-- Only after login -->
+			<p id="welcome-msg"></p>
 		</div>
-
+		
+		<div class="carousel">
+		<button class="arrow left">&#8249;</button>
+		
+		<section class="carousel-inner">
+			<button class="book" data-name="Lord of the Rings"></button>
+			<button class="book" data-name="Willow"></button>
+			<button class="book" data-name="Rise of Litty"></button>
+			<button class="book" data-name="Beggar's Gospel"></button>
+			<button class="book" data-name="The Return of The Crox"></button>
+		</section>
+		
+		<button class="arrow right"> &#8250 </button>
+		</div>
 	</main>
 
 
-	<footer class="""""sticky">
-
+	<footer class="sticky">
+		<h4>Arnav Priyadarshi &emsp; Arwin Fong &emsp; Eric Fan</h4>
 	</footer>
 </body>
 </html>

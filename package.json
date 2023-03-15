@@ -1,0 +1,19 @@
+{
+  "name": "okayreads",
+  "version": "1.0.0",
+  "description": "cscb20 asing,ent",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnavp103/okayreads.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnavp103/okayreads/issues"
+  },
+  "homepage": "https://github.com/arnavp103/okayreads#readme"
+}
