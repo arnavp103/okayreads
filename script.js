@@ -6,37 +6,52 @@ const carousel = document.querySelector(".carousel-inner");
 const books = document.querySelectorAll(".book");
 
 // navbar and controls
-const navbar = document.getElementById("navbar");
+const navbar = document.getElementById("navBar");
 
-const navbarButton = document.getElementById("navbarToggle");
+const navbarIcon = document.getElementById("navbarToggle");
 
 // Open nav bar
-function toggleNavbar(x) {
-    x.classList.toggle("change");
-    if (navbar.style.width.localeCompare("0") == 0) {
-        // Expand navbar
-        navbar.style.width = "200px";
+function toggleNavbar() {
+    try {
+        changeNavIcon();
+        console.log(navbar.style.width);
+        if (navbar.style.width.localeCompare("0px") == 0 || navbar.style.width.localeCompare("") == 0) {
+            // Expand navbar
+            navbar.style.width = "200px";
+        }
+        else {
+            // Collapse navbar
+            navbar.style.width = "0";
+        }
     }
-    else {
-        // Collapse navbar
-        navbar.style.width = "0";
+    catch (e) {
+        console.log(e.message);
     }
 }
 
-function changeNavVis(login, username) {
+// Change nav bar icon
+function changeNavIcon() {
+    navbarIcon.classList.toggle("change"); // Change navbar icon
+}
+
+// Call on start and login/logout
+function changeNavElementVis(login, username) {
     // Logged in
     if (login) {
-        document.getElementById("login").innerHTML = <a href='#'>Logout</a> // Change href to login page
-        document.getElementById("welcome_msg").innerHTML = "Welcome, ".concat(username);
+        document.getElementById("login").innerHTML = "Logout"
+        document.getElementById("login").href = "#" // Change to login page
+        document.getElementById("welcome_msg").textContent = "Welcome, ".concat(username);
         document.getElementById("welcome_msg").style.visibility = "visible"; // Show welcome message
         if (username.localeCompare("admin")) {
-            document.getElementById("adminpage").style.visibility = "collapse";
+            document.getElementById("adminpage").style.visibility = "visible"; // Only user "admin" should see "admin" option
         }
     }
     // Logged out
     else {
-        document.getElementById("login").innerHTML = <a href='#'>Login</a> // Change href to main page
+        document.getElementById("login").innerHTML = "Logout"
+        document.getElementById("login").href = "#" // Change to login page
         document.getElementById("welcome_msg").style.visibility = "collapse";
+        document.getElementById("adminpage").style.visibility = "collapse"
     }
 }
 
