@@ -50,37 +50,69 @@ footer {
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 60px;
 	transition: 0.5s; /* 0.5 second transition */
-  }
+}
 
-  .navbar a {
+.navbar a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
 	color: #818181;
 	display: block;
 	transition: 0.3s;
-  }
+}
   
-  .navbar a:hover {
+.navbar a:hover {
 	color: #f1f1f1;
-  }
+}
 
-  .navbar .closebtn {
+.navbar .closebtn {
 	position: absolute;
 	top: 0;
 	right: 25px;
 	font-size: 36px;
 	margin-left: 50px;
-  }
+}
 
-  #welcome-msg {
+#adminpage {
+	visibility: collapse;
+}
+
+#welcome_msg {
 	font-size: 16px;
+	visibility: collapse;
 	opacity: 0.4;
-  }
+	bottom: 0;
+}
 
-  @media screen and (max-height: 450px) { 
+.navbarToggle {
+	display: inline-block;
+	cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+  
+/* Rotate first bar */
+.change .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+  
+  /* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+.change .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+
+@media screen and (max-height: 450px) { 
 	/* For when dimensions too small */
-  }
+}
 
 .carousel {
 	margin: 1rem;
