@@ -2,7 +2,7 @@
 
 // carousel_controls
 const arrows = document.querySelectorAll(".arrow");
-
+const carousel = document.querySelector(".carousel-inner");
 const books = document.querySelectorAll(".book");
 
 // navbar and controls
@@ -38,4 +38,19 @@ function changeNavVis(login, username) {
         document.getElementById("login").innerHTML = <a href='#'>Login</a> // Change href to main page
         document.getElementById("welcome_msg").style.visibility = "collapse";
     }
+}
+
+
+arrows[0].addEventListener("click", () => {
+	const dx = books[0].clientWidth;
+	carousel.scrollLeft -= dx;
+});
+
+arrows[1].addEventListener("click", () => {
+	const dx = books[0].clientWidth;
+	carousel.scrollLeft += dx;
+});
+
+for (const book of books) {
+	book.style.background = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
 }
