@@ -6,21 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Okayreads</title>
 	<link rel="stylesheet" href="/styles/style.css">
-	<script defer src="/script.js"></script>
+	<script defer src="../script.js"></script>
 </head>
 <body>
 	<header class="sticky">
-		<button class="navbarbtn" onclick="openNav()"></button>
+		<div id="navbarToggle" onclick="toggleNavbar()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
 	</header>
 
 	<main>
 		<div id="navBar" class="navbar">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href=".">Home</a>
+			<a href="#">Home</a>
 			<a href="#">Reviews</a>
-			<a href="#">Admin</a> <!-- Only appears if login name is "admin" -->
-			<a href="#">Logout</a> <!-- Only after login -->
-			<p id="welcome-msg"></p>
+			<a href="#" id="adminpage">Admin</a> <!-- Only appears if login name is "admin" -->
+			<a href="./login.html" id="login" class="nav-bottom">Login</a>
+			<p id="welcome_msg" class="nav-bottom"></p>
 		</div>
 
 		<div class="carousel">

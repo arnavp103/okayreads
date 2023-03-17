@@ -1,9 +1,8 @@
 body {
-    overflow-x: hidden;
+    display: flex;
+    flex-flow: column wrap;
     margin: 0;
     padding: 0;
-    display: flex;
-	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(to bottom right, gainsboro, #FFFDD0);
@@ -17,75 +16,129 @@ div {
 header {
     border-bottom: 5px solid black;
     height: 8vh;
+    width: 100vw;
 }
 
-.book-img {
-    max-width: 100%;
+#main-content {
+    flex-grow: 1;
+    height: 91%;
+    width: 100vw;
+}
+
+#book-flex {
+    flex-direction: column;
+}
+
+#book img {
+    width: 20vw;
     height: auto;
+}
+
+#star-rating {
+    display: inline-block;
+    white-space : nowrap; 
+    text-align: center;
+    width: 20vw;
+}
+
+#star-rating > span:before {
+    content: '★ ';
+    font-size: 4vmin;
+    cursor: pointer;
+}
+
+#star-rating:hover > span:before {
+    color: #f1f175;
+}
+
+#star-rating > span:hover ~ span:before {
+    color: black;
+}
+
+#book {
+    padding: 20px 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px solid black; */
+    width: 30vw;
+}
+
+#synopsis {
+    flex-direction: column;
+    width: 90%;
+}
+
+#book-info {
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    /* border: 5px solid black; */
+    padding: 8px;
+    width: 70%;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: 10px;
     padding: 0;
 }
 
-.book {
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    position: sticky;
-    justify-content: center;
-    align-items: center;
-    /* border: 5px solid black; */
-    width: 33%;
-    height: 85vh;
-}
-
-.book-info {
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    position: relative;
-    /* border: 5px solid black; */
-    width: 66%;
-    height: 85vh;
-    overflow-y: scroll;
-}
-
-li {
+ul > li {
     display: flex;
+    flex-direction: column;
+    /* border: 5px solid black; */
+    padding: 10px;
 }
 
-#write-review {
+input[type=text] {
+    width: 100%;
+    padding: 12px 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
     font-size: 24px;
     padding: 15px 32px;
     border-radius: 8px;
     color: white;
-    background: black;
-    width: 20%;
+	background: burlywood;
+    max-width: 100%;
+    align-self: center;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background: #977d5c;
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-}
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-background: #555;
-}
-
-@media screen and (max-width: 600px) {
-    .book {
+@media screen and (max-width: 600px)
+  {
+    #book {
         display: none;
     }
-    .book-info {
+    #book-info {
         width: 100%;
     }
 }
