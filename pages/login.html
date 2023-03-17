@@ -19,19 +19,17 @@
 	
 	<main>
 		<div id="navBar" class="navbar">
-			<a href="#">Home</a>
-			<a href="#">Reviews</a>
-			<a href="#" id="adminpage">Admin</a> <!-- Only appears if login name is "admin" -->
-			<a href="#" id="login" class="nav-bottom">Login</a>
-			<p id="welcome_msg" class="nav-bottom"></p>
+			<p id="login-msg">Please login to continue</p>
 		</div>
 		
-		<h2>Login</h2>
-        <label for="uname">Username:</label>
-        <input type="text" id="uname"><br>
-        <label for="pw">Password:</label>
-        <input type="text" id="pw">
-        <button type="button" onclick="login()">Login</button>
+		<div id="login_box">
+			<h2>Login</h2><br>
+			<label for="uname">Username:</label>
+			<input type="text" id="uname"><br>
+			<label for="pw">Password:</label>
+			<input type="text" id="pw"><br>
+			<button type="button" onclick="login()">Login</button>
+		</div>
 	</main>
 
 
