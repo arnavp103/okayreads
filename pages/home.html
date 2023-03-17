@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Okayreads</title>
+	<link rel="stylesheet" href="/styles/style.css">
+	<script defer src="../src/home.js"></script>
+</head>
+<body>
+	<header class="sticky">
+		<div id="navbarToggle" onclick="toggleNavbar()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+	</header>
+
+	<main>
+		<div id="navBar" class="navbar">
+			<a href="#">Home</a>
+			<a href="#">Reviews</a>
+			<a href="#" id="adminpage">Admin</a> <!-- Only appears if login name is "admin" -->
+			<a href="./login.html" id="login" class="nav-bottom">Login</a>
+			<p id="welcome_msg" class="nav-bottom"></p>
+		</div>
+
+		<div class="carousel">
+		<button class="arrow left">&#8249;</button>
+
+		<section class="carousel-inner">
+			<section class="book-card" data-name="Lord of the Rings">
+				<img src="/assets/Lord of the Rings.jpg" alt="Lord of the Rings">
+				<div class="highlight description">
+					<p>The King of Ceilan rode through his city with a large ruby in his hand, as the ceremony of his coronation. The gates of the palace of John the Priest were "made of sardius, with the horn of the horned snake inwrought, so that no man might bring poison within."</p>
+					<p>Over the gable were "two golden apples, in which were two carbuncles," so that the gold might shine by day and the carbuncles by night. </p>
+					<p>In Lodge's strange romance 'A Margarite of America', it was stated that in the chamber of the queen one could behold "all the chaste ladies of the world, inchased out of silver, looking through fair mirrours of chrysolites, carbuncles, sapphires, and greene emeraults." </p>
+				</div>
+				<div class="checkout">
+					<button class="checkout-btn">Checkout</button>
+				</div>
+			</section>
+			<section class="book-card" data-name="Willow">
+				<img src="/assets/Willow.jpeg" alt="Willow">
+				<div class="highlight description"></div>
+				<div class="checkout"></div>
+			</section>
+			<section class="book-card" data-name="The Perks of Being a Wallflower">
+				<img src="/assets/The Perks of Being a Wallflower.jpg" alt="The Perks of Being a Wallflower">
+				<div class="highlight description"></div>
+				<div class="checkout"></div>
+			</section>
+			<section class="book-card" data-name="Go As a River">
+				<img src="/assets/Go As a River.webp" alt="Go As a River">
+				<div class="highlight description"></div>
+				<div class="checkout"></div>
+			</section>
+			<section class="book-card" data-name="The Croxxroxx">
+				<img src="/assets/The Croxxroxx.jpeg" alt="The Croxxroxx">
+				<div class="highlight description"></div>
+				<div class="checkout"></div>
+			</section>
+		</section>
+
+		<button class="arrow right"> &#8250 </button>
+		</div>
+	</main>
+
+
+	<footer class="sticky">
+		<h4><em>Made with ❤️ by Arnav Priyadarshi, Arwin Fong, & Eric Fan</em></h4>
+	</footer>
+</body>
+</html>
