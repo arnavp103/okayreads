@@ -82,6 +82,7 @@ header {
 	flex: 1;
 	position: relative;
 	overflow: hidden;
+	filter: drop-shadow(0 0 10px #0003);
 }
 
 .carousel-inner {
@@ -93,10 +94,13 @@ header {
 	overflow: scroll;
 	scroll-behavior: smooth;
 	scrollbar-width: none;
+	-webkit-overflow-scrolling: touch;
+	scroll-snap-type: x mandatory;
 }
 
 /* each book should take up the entire container */
 .book {
+	scroll-snap-align: start;
 	width: 100%;
 	height: 100%;
 	padding: 2rem;
@@ -150,4 +154,9 @@ footer {
 	justify-self: center;
 	height: 8vh;
 	top: calc(100vh - 8vh);
+}
+
+footer > h4 {
+	line-height: 120%;
+	margin: auto;
 }
