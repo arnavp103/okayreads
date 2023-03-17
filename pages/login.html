@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Okayreads</title>
-	<link rel="stylesheet" href="/styles/style.css">
-	<script defer src="../script.js"></script>
+	<title>Login to Okayreads</title>
+	<link rel="stylesheet" href="/styles/login-styles.css">
+	<script defer src="../login.js"></script>
 </head>
 <body>
 	<header class="sticky">
@@ -26,19 +26,12 @@
 			<p id="welcome_msg" class="nav-bottom"></p>
 		</div>
 		
-		<div class="carousel">
-		<button class="arrow left">&#8249;</button>
-
-		<section class="carousel-inner">
-			<button class="book" data-name="Lord of the Rings"></button>
-			<button class="book" data-name="Willow"></button>
-			<button class="book" data-name="Rise of Litty"></button>
-			<button class="book" data-name="Beggar's Gospel"></button>
-			<button class="book" data-name="The Return of The Crox"></button>
-		</section>
-
-		<button class="arrow right"> &#8250 </button>
-		</div>
+		<h2>Login</h2>
+        <label for="uname">Username:</label>
+        <input type="text" id="uname"><br>
+        <label for="pw">Password:</label>
+        <input type="text" id="pw">
+        <button type="button" onclick="login()">Login</button>
 	</main>
 
 
@@ -46,4 +39,5 @@
 		<h4>Arnav Priyadarshi &emsp; Arwin Fong &emsp; Eric Fan</h4>
 	</footer>
 </body>
+
 </html>
