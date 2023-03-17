@@ -145,7 +145,7 @@ header {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas:
-		"img reviews"
+		"img description"
 		"img info";
 	gap: 1rem 0;
 	z-index: 2;
@@ -162,15 +162,15 @@ header {
 	justify-self: center;
 }
 
-.reviews {
-	grid-area: reviews;
+.description {
+	grid-area: description;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	text-align: center;
 }
 
-.reviews > h3 {
+.description > h3 {
 	font-size: 1.5rem;
 }
 
