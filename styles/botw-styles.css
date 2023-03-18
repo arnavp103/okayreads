@@ -34,30 +34,58 @@ header {
     height: auto;
 }
 
+#book-info > p {
+    text-align: center;
+}
+
 #star-rating {
+    font-size: 4vmin;
     display: inline-block;
     white-space : nowrap; 
     text-align: center;
     width: 20vw;
+    align-self: center;
 }
 
 #star-rating > span:before {
     content: '★ ';
     font-size: 4vmin;
+}
+
+#star-rating label {
     cursor: pointer;
+    float: right;
+    color:black;
 }
 
 #star-rating:hover > span:before {
     color: #f1f175;
 }
+/* Remove default radio display */
+#star-rating input[type=radio] {
+    display: none;
+}
 
 #star-rating > span:hover ~ span:before {
     color: black;
+}
+/* Handle rating click*/
+#star-rating input[type=radio]:checked ~ label {
+    color: #c59b08
+}
+
+/* Handle cursor hovering */
+#star-rating:not(:checked) > label:hover,
+#star-rating:not(:checked) > label:hover ~ label 
+{
+    color: #755d05 !important;
 }
 
 #book {
     padding: 20px 20px;
     flex-direction: row;
+    flex-direction: column;
+    row-gap: 30px;
     align-items: center;
     justify-content: center;
     /* border: 5px solid black; */
@@ -72,11 +100,18 @@ header {
 #book-info {
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     overflow-y: scroll;
     /* border: 5px solid black; */
     padding: 8px;
     width: 70%;
 }
+
+#synopsis {
+    flex-direction: column;
+    width: 90%;
+}
+
 
 ul {
     list-style-type: none;
@@ -102,6 +137,7 @@ button {
     font-size: 24px;
     padding: 15px 32px;
     border-radius: 8px;
+    border: none;
     color: white;
 	background: burlywood;
     max-width: 100%;

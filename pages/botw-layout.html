@@ -3,7 +3,6 @@
     <head>
         <title>Book Title</title>
         <link rel="stylesheet" href="/styles/botw-styles.css">
-        <script defer type="module" src="../src/botw.js"></script>
     </head>
     <body>
         <header>
@@ -11,16 +10,8 @@
         </header>
         <div id="main-content">
             <div id="book">
-                <div id="book-flex">
-                    <img id="book-img" placeholder="no image found"/>
-                    <div id="star-rating">
-                        <span id="star-1"></span>
-                        <span id="star-2"></span>
-                        <span id="star-3"></span>
-                        <span id="star-4"></span>
-                        <span id="star-5"></span>
-                    </div>
-                </div>
+                <img id="book-img" placeholder="no image found"/>
+                <button>Order online</button>
             </div>
             <div id="book-info">
                 <h1 id="book-title">Book Title</h1>
@@ -30,9 +21,23 @@
                     <p id="book-summary">If you are seeing this, this means there is no summary or there is an error</p>
                 </div>
                 <h2>Write a review about this book</h2>
-                <input type="text" id="review-input" placeholder="Write a review"></input>
+                <input type="text" id="review-input" placeholder="Write a review"></input> 
+                <p>Give this book a rating!</p>
+                <div id="star-rating"> 
+                    <input type="radio" id="star-5" name="rating" value="5"> 
+                    <label for="star-5">★ </label> 
+                    <input type="radio" id="star-4" name="rating" value="4"> 
+                    <label for="star-4">★ </label> 
+                    <input type="radio" id="star-3" name="rating" value="3"> 
+                    <label for="star-3">★ </label>
+                    <input type="radio" id="star-2" name="rating" value="2"> 
+                    <label for="star-2">★ </label> 
+                    <input type="radio" id="star-1" name="rating" value="1" checked> 
+                    <label for="star-1">★ </label> 
+                </div>
                 <button id="write-review">Submit review</button>
             </div>
         </div>
+    <script type="module" src="/src/botw.js"></script>
     </body>
 </html>
