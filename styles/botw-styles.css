@@ -1,6 +1,8 @@
 body {
     display: flex;
+    flex: 1 1 auto;
     flex-flow: column wrap;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 	width: 100vw;
@@ -16,12 +18,29 @@ div {
 header {
     border-bottom: 5px solid black;
     height: 8vh;
-    width: 100vw;
+    bottom: calc(100vh - 8vh);
+    background-color: burlywood;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	border-top: 0.2rem solid black;
+	justify-content: center;
+	justify-self: center;
+	height: 8vh;
+	top: calc(100vh - 8vh);
+    background-color: burlywood;
+}
+
+footer > h4 {
+	line-height: 1.5rem;
+	margin: auto;
 }
 
 #main-content {
-    flex-grow: 1;
-    height: 91%;
+    flex: 1 1 auto;
+    height: 10%;
     width: 100vw;
 }
 
@@ -30,21 +49,14 @@ header {
 }
 
 #book img {
-    width: 20vw;
-    height: auto;
-}
-
-#book-info > p {
-    text-align: center;
+    width: 200px;
 }
 
 #star-rating {
     font-size: 4vmin;
     display: inline-block;
-    white-space : nowrap; 
-    text-align: center;
-    width: 20vw;
-    align-self: center;
+    white-space : nowrap;
+    /* border: 5px solid black; */
 }
 
 #star-rating > span:before {
@@ -54,6 +66,7 @@ header {
 
 #star-rating label {
     cursor: pointer;
+    vertical-align: middle;
     float: right;
     color:black;
 }
@@ -87,7 +100,7 @@ header {
     flex-direction: column;
     row-gap: 30px;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     /* border: 5px solid black; */
     width: 30vw;
 }
@@ -109,9 +122,8 @@ header {
 
 #synopsis {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
 }
-
 
 ul {
     list-style-type: none;
