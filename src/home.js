@@ -71,15 +71,7 @@ arrows[1].addEventListener("click", () => {
 	carousel.scrollLeft += dx;
 });
 
-// Open nav bar
-function openNav() {
-	navbar.style.width = "200px";
-}
-
-// Close nav bar
-function closeNav() {
-	navbar.style.wideth = "0";
-}
+//---------------------------
 
 // Open nav bar
 function toggleNavbar() {
@@ -107,7 +99,7 @@ function changeNavIcon() {
 }
 
 // Call on start and login/logout
-function changeNavElementVis(login, username) {
+export function setNavElementVis(login, username) {
     // Logged in
     if (login) {
         document.getElementById("login").innerHTML = "Logout"

@@ -39,7 +39,7 @@ header {
 	z-index: 10; /* Stay on top */
 	top: 0; /* Stay at the top */
 	left: 0;
-	background-color: #37b58b;
+	background: linear-gradient(to bottom right, rgb(71, 140, 237), #0b0161);
 	overflow-x: hidden; /* Disable horizontal scroll */
 	padding-top: 60px;
 	transition: 0.5s; /* 0.5 second transition */
@@ -47,21 +47,21 @@ header {
 	flex-direction: column;
 }
 
-.nav-bottom {
-	align-self: bottom;
+#filler {
+	flex: 1 1 auto;
 }
 
 .navbar a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
-	color: #5a5959;
+	color: #f1f1f1;
 	display: block;
 	transition: 0.3s;
 }
 
 .navbar a:hover {
-	color: #f1f1f1;
+	color: #a4a1a1;
 }
 
 /* Menu button */
@@ -100,9 +100,13 @@ header {
 	visibility: hidden;
 }
 
-#welcome-msg {
-	font-size: 16px;
+#welcome_msg {
+	margin-top: 10px;
+	margin-bottom: 6px;
+	font-size: 20px;
 	opacity: 0.4;
+	color: #f1f1f1;
+	text-align: center;
 }
 
 @media screen and (max-height: 450px) {

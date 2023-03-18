@@ -1,7 +1,7 @@
 {
   "name": "okayreads",
   "version": "1.0.0",
-  "description": "cscb20 asing,ent",
+  "description": "cscb20 assingment",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

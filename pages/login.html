@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login to Okayreads</title>
 	<link rel="stylesheet" href="/styles/login-styles.css">
-	<script defer src="../src/login.js"></script>
 </head>
 <body>
 	<header class="sticky">
@@ -16,26 +15,27 @@
 			<div class="bar3"></div>
 		</div>
 	</header>
-
+	
 	<main>
 		<div id="navBar" class="navbar">
 			<p id="login-msg">Please login to continue</p>
 		</div>
-
+		
 		<div id="login_box">
 			<h2>Login</h2><br>
 			<label for="uname">Username:</label>
 			<input type="text" id="uname"><br>
 			<label for="pw">Password:</label>
-			<input type="text" id="pw"><br>
-			<button type="button" onclick="login()">Login</button>
+			<input type="password" id="pw"><br>
+			<button type="button" id="login_button">Login</button>
 		</div>
 	</main>
-
-
+	
+	
 	<footer class="sticky">
 		<h4>Arnav Priyadarshi &emsp; Arwin Fong &emsp; Eric Fan</h4>
 	</footer>
+	<script defer src="../src/login.js"></script>
 </body>
 
 </html>
