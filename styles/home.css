@@ -41,6 +41,7 @@ header {
 	font: 800;
 	color-scheme: dark;
 	color: lab(40% 3 -10);
+	font-family: Verdana, sans-serif;
 }
 
 .navbar {
@@ -177,7 +178,7 @@ header {
 	justify-self: center;
 }
 
-.description {
+.synopsis {
 	grid-area: description;
 	display: flex;
 	flex-direction: column;
