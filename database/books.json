@@ -3,12 +3,14 @@
       "title": "Lord Of the Rings",
       "author": "J. R. R. Tolkien",
       "summary": "summary",
-      "image": "/assets/Lord of the Rings.jpg"
+      "image": "/assets/Lord of the Rings.jpg",
+      "rating": []
     },
     "2": {
       "title": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "summary": "Scout Finch lives with her brother, Jem, and their widowed father, Atticus, in the sleepy Alabama town of Maycomb. Maycomb is suffering through the Great Depression, but Atticus is a prominent lawyer and the Finch family is reasonably well off in comparison to the rest of society. One summer, Jem and Scout befriend a boy named Dill, who has come to live in their neighborhood for the summer, and the trio acts out stories together. Eventually, Dill becomes fascinated with the spooky house on their street called the Radley Place. The house is owned by Mr. Nathan Radley, whose brother, Arthur (nicknamed Boo), has lived there for years without venturing outside. Scout goes to school for the first time that fall and detests it. She and Jem find gifts apparently left for them in a knothole of a tree on the Radley property. Dill returns the following summer, and he, Scout, and Jem begin to act out the story of Boo Radley. Atticus puts a stop to their antics, urging the children to try to see life from another person’s perspective before making judgments. But, on Dill’s last night in Maycomb for the summer, the three sneak onto the Radley property, where Nathan Radley shoots at them. Jem loses his pants in the ensuing escape. When he returns for them, he finds them mended and hung over the fence.",
-      "image": "/assets/tkam.jpg"
+      "image": "/assets/tkam.jpg",
+      "rating": []
     }
 }

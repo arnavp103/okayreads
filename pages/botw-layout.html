@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Book Title</title>
-        <link rel="stylesheet" href="/styles/botw-styles.css">
+        <link rel="stylesheet" href="../styles/botw-styles.css">
+        <link rel="stylesheet" href="../styles/utils.css">
+        <title>Okayreads</title>
     </head>
     <body>
         <header>
@@ -10,7 +12,10 @@
         <div id="main-content">
             <div id="book">
                 <img id="book-img" placeholder="no image found"/>
-                <button>Order online</button>
+                <div id="book-rating">
+                    <p id="average-rating">0★</p>
+                    <p id="review-count">(0)</p>
+                </div>
             </div>
             <div id="book-info">
                 <h1 id="book-title">Book Title</h1>
@@ -20,19 +25,19 @@
                     <p id="book-summary">If you are seeing this, this means there is no summary or there is an error</p>
                 </div>
                 <h2>Write a review about this book</h2>
-                <input type="text" id="review-input" placeholder="Write a review"></input> 
+                <input type="text" id="review-input" placeholder="Write a review"></input>
                 <p>Give this book a rating!</p>
-                <div id="star-rating"> 
-                    <input type="radio" id="star-5" name="rating" value="5"> 
-                    <label for="star-5">★ </label> 
-                    <input type="radio" id="star-4" name="rating" value="4"> 
-                    <label for="star-4">★ </label> 
-                    <input type="radio" id="star-3" name="rating" value="3"> 
+                <div id="star-rating">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5">★ </label>
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4">★ </label>
+                    <input type="radio" id="star-3" name="rating" value="3">
                     <label for="star-3">★ </label>
-                    <input type="radio" id="star-2" name="rating" value="2"> 
-                    <label for="star-2">★ </label> 
-                    <input type="radio" id="star-1" name="rating" value="1" checked> 
-                    <label for="star-1">★ </label> 
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2">★ </label>
+                    <input type="radio" id="star-1" name="rating" value="1" checked>
+                    <label for="star-1">★ </label>
                 </div>
                 <button id="write-review">Submit review</button>
             </div>
