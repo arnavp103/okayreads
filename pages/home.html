@@ -7,10 +7,11 @@
 	<title>Okayreads</title>
 	<link rel="stylesheet" href="/styles/style.css">
 	<script defer src="../src/home.js"></script>
+	<script defer src="../src/navbar.js"></script>
 </head>
 <body>
 	<header class="sticky">
-		<div id="navbarToggle" onclick="toggleNavbar()">
+		<div id="navbarToggle">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
@@ -19,9 +20,9 @@
 
 	<main>
 		<div id="navBar" class="navbar">
-			<a href="#">Home</a>
+			<!-- <a href="home.html">Home</a> -->
 			<a href="#">Reviews</a>
-			<!-- <a href="#" id="adminpage">Admin</a> Only appears if login name is "admin" -->
+			<a href="#" id="adminpage">Admin</a>
 			<div id="filler"></div>
 			<a href="./login.html" id="login">Login</a>
 			<p id="welcome_msg">Welcome to Okayreads.<br>Please login.</p>

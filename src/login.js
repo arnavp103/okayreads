@@ -7,16 +7,15 @@ async function login() {
     const users = await response.json();
     Object.keys(users).forEach(function(key) {
         // Check credentials with each JSON entry
-        if ((uname.value === users[key]["username"]) && (pw.value === users[key]["password"])) { // Credentials found
+        if ((uname.value == users[key]["username"]) && (pw.value == users[key]["password"])) { // Credentials found
             window.location.href = "/pages/home.html"; // Redirect to home
-            console.log("Done");
-            const setNavElementVis = require("./home.js");
-            setNavElementVis(true, username);
-            return;
+            localStorage.setItem("activeUser", uname.value); // Register username to local storage
         }
     })
     // Credentials not found
-    alert("Incorrect username or password! Please try again.");
+    if (localStorage.getItem("activeUser") === null) {
+        alert("Incorrect username or password! Please try again.");
+    }
 }
 
 document.addEventListener("keypress", function (e) {
