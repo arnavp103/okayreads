@@ -13,6 +13,7 @@ function checkLogin() {
     
 function init_navbar() {
     // Init links
+    navbar.style.paddingTop = (document.querySelector("header").offsetHeight + 3).toString() + "px";
     document.getElementById("homepage").href = "/pages/home.html";
     document.getElementById("adminpage").href = "/pages/admin.html";
     // document.getElementById("reviewpage").href = "/pages/reviews.html";
@@ -51,7 +52,6 @@ document.getElementById("login").addEventListener("click", () => {
 
 // Open nav bar
 function toggleNavbar() {
-    const navbar = document.getElementById("navBar");
     try {
         // Mobile view
         if (window.innerWidth <= 450) {
