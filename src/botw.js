@@ -62,6 +62,14 @@ function updateReview (avgScore){
 
 // Get the ID of the book to display
 function getBookID() {
+    const keys = Object.keys(booksJSON);
+    for (let i = 1; i < keys.length; i++){
+        console.log(booksJSON[i].title === window.localStorage.getItem("Title"));
+        if (booksJSON[i].title == window.localStorage.getItem("Title")) {
+            return i;
+        }
+    }
+
     return 1;
 }
 

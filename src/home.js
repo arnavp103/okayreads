@@ -16,7 +16,9 @@ function populate(order) {
 		section.classList.add("book-card");
 		section.setAttribute("data-name", book.title);
 		section.innerHTML = `
-			<img src="${book.image}" alt="${book.title}">
+			<a href="./botw-layout.html" class="botw-link">
+				<img src="${book.image}" alt="${book.title}">
+			</a>
 			<div class="highlight synopsis">${book.synopsis}</div>
 			<div class="redirects">
 				<button>Reviews</button>
@@ -91,3 +93,10 @@ arrows[1].addEventListener("click", () => {
     const dx = books[0].clientWidth;
 	carousel.scrollLeft += dx;
 });
+
+document.querySelector(".carousel-inner").addEventListener('click', function(e) {
+    var anchor = e.target.closest('a');
+    if(anchor !== null) {
+      window.localStorage.setItem("Title", anchor.querySelector("img").alt);
+    }
+  }, false);
