@@ -12,6 +12,10 @@ function checkLogin() {
 }
     
 function init_navbar() {
+    // Init links
+    document.getElementById("adminpage").href = "/pages/admin.html";
+    document.getElementById("reviewpage").href = "/pages/reviews.html";
+    document.getElementById("login").href = "/pages/login.html";
     // No user logged in
     if (!checkLogin()) {
         document.getElementById("adminpage").style.display = "none"; // Remove "Admin"
