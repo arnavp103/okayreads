@@ -13,7 +13,6 @@ function checkLogin() {
     
 function init_navbar() {
     // Init links
-    navbar.style.paddingTop = (document.querySelector("header").offsetHeight + 3).toString() + "px";
     document.getElementById("homepage").href = "/pages/home.html";
     document.getElementById("adminpage").href = "/pages/admin.html";
     // document.getElementById("reviewpage").href = "/pages/reviews.html";
@@ -55,12 +54,14 @@ function toggleNavbar() {
     try {
         // Mobile view
         if (window.innerWidth <= 450) {
+            navbar.style.paddingTop = (document.querySelector("header").offsetHeight).toString() + "px";
             navbar.style.width = "100%";
             if (navbar.style.height.localeCompare("100%") == 0) {
                 navbar.style.height = "0px";
             }
             if (navbar.style.height.localeCompare("0px") == 0 || navbar.style.height.localeCompare("") == 0) {
                 // Expand navbar
+                navbar.style.paddingTop = (document.querySelector("header").offsetHeight + 3).toString() + "px";
                 navbar.style.height = "300px";
             }
             else {
@@ -71,11 +72,13 @@ function toggleNavbar() {
         // Desktop view
         else {
             navbar.style.height = "100%";
+            navbar.style.paddingTop = (document.querySelector("header").offsetHeight).toString() + "px";
             if (navbar.style.width.localeCompare("100%") == 0) {
                 navbar.style.width = "0px";
             }
             if (navbar.style.width.localeCompare("0px") == 0 || navbar.style.width.localeCompare("") == 0) {
                 // Expand navbar
+                navbar.style.paddingTop = (document.querySelector("header").offsetHeight + 3).toString() + "px";
                 navbar.style.width = "200px";
             }
             else {
