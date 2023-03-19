@@ -3,13 +3,18 @@
 }
 /* Header */
 
-header {
-    border-bottom: 5px solid black;
-    height: 8vh;
-    bottom: calc(100vh - 8vh);
-    background-color: burlywood;
+header{
+	display: flex;
+	flex-direction: row;
+	border-bottom: 0.2rem solid rebeccapurple;
+	height: 8vh;
+	bottom: calc(100vh - 8vh);
+	z-index: 12;
+	background: whitesmoke;
+	justify-self: flex-start;
+	justify-content: space-between;
+	align-items: center;
 }
-
 /* Footer */
 
 footer {
@@ -20,7 +25,7 @@ footer {
 	justify-self: center;
 	height: 8vh;
 	top: calc(100vh - 8vh);
-    background-color: burlywood;
+    background-color: whitesmoke;
 }
 
 footer > h4 {

@@ -16,12 +16,16 @@ function populate(order) {
 		section.classList.add("book-card");
 		section.setAttribute("data-name", book.title);
 		section.innerHTML = `
-			<a href="./botw-layout.html" class="botw-link">
+			<a href="./botw.html" name="${book.title}">
 				<img src="${book.image}" alt="${book.title}">
 			</a>
 			<div class="highlight synopsis">${book.synopsis}</div>
 			<div class="redirects">
-				<button>Reviews</button>
+			<button>
+				<a href="./reviews.html" name="${book.title}">	
+					Reviews
+				</a>
+			</button>
 			</div>
 		`;
 		carousel.appendChild(section);
@@ -97,6 +101,6 @@ arrows[1].addEventListener("click", () => {
 document.querySelector(".carousel-inner").addEventListener('click', function(e) {
     var anchor = e.target.closest('a');
     if(anchor !== null) {
-      window.localStorage.setItem("Title", anchor.querySelector("img").alt);
+      window.localStorage.setItem("Title", anchor.name);
     }
   }, false);

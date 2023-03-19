@@ -1,17 +1,10 @@
 {
     "1": {
         "username": "name",
-        "password": "pw",
-        "reviews": [
-            {
-                "book-id": 1,
-                "review": "This book sucks"
-            }
-        ]
+        "password": "pw"
     },
     "2": {
         "username": "admin",
-        "password": "admin",
-        "reviews": []
+        "password": "admin"
     }
 }

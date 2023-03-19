@@ -17,46 +17,93 @@ window.addEventListener("DOMContentLoaded", loadPage);
 reviewButton.addEventListener("click", submitReview);
 
 function submitReview(){
+    book = JSON.parse(window.localStorage.getItem(booksJSON[id].title));
+    if (book == null) {
+        var book = { 
+            reviews: {
+                user: [],
+                review: [],
+                rating: []
+            }
+        };
+    }
     id = getBookID();
     // Get new star rating at the time of review submission
     stars = document.querySelector('input[name="rating"]:checked');
-    // TODO: Check if user exists first
+    const activeUser = window.localStorage.getItem("activeUser");
     if (reviewField.value == "") {
         // Give user an error message
-        console.log("nothing");
-        console.log("Please write a review before submitting.");
+        alert("Please write a review before submitting.")
     }
     else {
-        // Save to review db
-        console.log(reviewField.value);
+        // Save to review local storage
+        console.log(activeUser);
+        var i = reviewHasNoValue(book.reviews.user, activeUser)
+        if (i != -1){
+            book.reviews.user[i] = activeUser;
+            book.reviews.review[i] = reviewField.value;
+            book.reviews.rating[i] = parseInt(stars.value);
+        }
+        else {
+            book.reviews.user[book.reviews.user.length] = activeUser;
+            book.reviews.review[book.reviews.review.length] = reviewField.value;
+            book.reviews.rating[book.reviews.rating.length] = parseInt(stars.value);
+        }
         reviewField.value = "";
-        console.log(stars.value);
-        booksJSON[id].rating.push(stars.value);
+        window.localStorage.setItem(booksJSON[id].title, JSON.stringify(book));
     }
     calculateRating();
 }
 
+function reviewHasNoValue (user_arr, username){
+    for(let i = 0; i < user_arr.length; i++) {
+        if (user_arr[i] == username) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 // Calculate the average rating for the book with ID id
 function calculateRating (){
-    id = getBookID();
+    book = JSON.parse(window.localStorage.getItem(booksJSON[id].title));
+    if (book == null) {
+        var book = { 
+            reviews: {
+                user: [],
+                review: [],
+                rating: []
+            }
+        };
+    }   
     var avgScore = 0;
 
-    for (var score in booksJSON[id].rating) {
-        avgScore += parseInt(booksJSON[id].rating[score]);
+    for (var score in book.reviews.rating) {
+        avgScore += parseInt(book.reviews.rating[score]);
     }
 
     if (avgScore == 0) {        // No reviews
         updateReview(0);
     }
     else {
-        updateReview((avgScore / booksJSON[id].rating.length).toFixed(1));
+        updateReview((avgScore / book.reviews.rating.length).toFixed(1));
     }
 }
 
 // Update the page with a new review count and score average
 function updateReview (avgScore){
+    book = JSON.parse(window.localStorage.getItem(booksJSON[id].title));
+    if (book == null) {
+        var book = { 
+            reviews: {
+                user: [],
+                review: [],
+                rating: []
+            }
+        };
+    } 
     id = getBookID();
-    reviewCount.innerHTML = "(" + booksJSON[id].rating.length + ")";
+    reviewCount.innerHTML = "(" + book.reviews.rating.length + ")";
     avgRating.innerHTML = avgScore + "★";
 }
 
@@ -64,13 +111,11 @@ function updateReview (avgScore){
 function getBookID() {
     const keys = Object.keys(booksJSON);
     for (let i = 1; i < keys.length; i++){
-        console.log(booksJSON[i].title === window.localStorage.getItem("Title"));
         if (booksJSON[i].title == window.localStorage.getItem("Title")) {
             return i;
         }
     }
-
-    return 1;
+    return -1;
 }
 
 // When the page is loaded, load information about book
@@ -86,6 +131,6 @@ function loadBook() {
     document.title = booksJSON[id].title;
     bookTitle.innerHTML = booksJSON[id].title;
     bookImage.src = booksJSON[id].image;
-    bookSummary.innerHTML = booksJSON[id].summary;
+    bookSummary.innerHTML = booksJSON[id].synopsis;
     bookAuthor.innerHTML = booksJSON[id].author;
 }

@@ -27,6 +27,14 @@ div {
     font-size: 20px;
 }
 
+#user-review {
+    list-style-type: none;
+}
+
+.username {
+    font-weight: bold;
+}
+
 #book {
     padding: 20px 20px;
     width: 50vw;

@@ -11,23 +11,21 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-div {
-    display: flex;
-    flex: 1 1 auto;
-}
-
 #main-content {
+    display: flex;
     flex: 1 1 auto;
     height: 10%;
     width: 100vw;
 }
 
 #book-flex {
+    display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
 }
 
 #book img {
+    display: flex;
     width: 200px;
 }
 
@@ -73,12 +71,20 @@ div {
 }
 
 #book {
+    display: flex;
+    flex: 1 1 auto;
     padding: 20px 20px;
     flex-direction: column;
     row-gap: 30px;
     align-items: center;
     justify-content: right;
     width: 30vw;
+}
+
+#book-rating {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
 }
 
 #book-rating > p {
@@ -91,6 +97,7 @@ div {
 }
 
 #book-info {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
