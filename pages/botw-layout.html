@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Book Title</title>
-        <link rel="stylesheet" href="/styles/botw-styles.css">
+        <link rel="stylesheet" href="../styles/botw-styles.css">
+        <link rel="stylesheet" href="../styles/utils.css">
     </head>
     <body>
         <header>
@@ -10,7 +11,10 @@
         <div id="main-content">
             <div id="book">
                 <img id="book-img" placeholder="no image found"/>
-                <button>Order online</button>
+                <div id="book-rating">
+                    <p id="average-rating">0★</p>
+                    <p id="review-count">(0)</p>
+                </div>
             </div>
             <div id="book-info">
                 <h1 id="book-title">Book Title</h1>
@@ -40,6 +44,6 @@
         <footer class="sticky">
             <h4><em>Made with ❤️ by Arnav Priyadarshi, Arwin Fong, & Eric Fan</em></h4>
         </footer>
-    <script type="module" src="/src/botw.js"></script>
+    <script type="module" src="../src/botw.js"></script>
     </body>
 </html>

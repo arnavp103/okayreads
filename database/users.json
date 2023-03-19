@@ -5,8 +5,9 @@
         "reviews": [
             {
                 "book-id": 1,
-                "review": "This book sucks"
-            }   
+                "review": "This book sucks",
+                "rating": 1
+            }
         ] 
     },
     "2": {    

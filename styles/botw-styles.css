@@ -1,41 +1,6 @@
-body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-flow: column wrap;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(to bottom right, gainsboro, #FFFDD0);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 div {
     display: flex;
-}
-
-header {
-    border-bottom: 5px solid black;
-    height: 8vh;
-    bottom: calc(100vh - 8vh);
-    background-color: burlywood;
-}
-
-footer {
-	display: flex;
-	flex-direction: row;
-	border-top: 0.2rem solid black;
-	justify-content: center;
-	justify-self: center;
-	height: 8vh;
-	top: calc(100vh - 8vh);
-    background-color: burlywood;
-}
-
-footer > h4 {
-	line-height: 1.5rem;
-	margin: auto;
+    flex: 1 1 auto;
 }
 
 #main-content {
@@ -53,15 +18,13 @@ footer > h4 {
 }
 
 #star-rating {
-    font-size: 4vmin;
+    font-size: 32px;
     display: inline-block;
     white-space : nowrap;
-    /* border: 5px solid black; */
 }
 
 #star-rating > span:before {
     content: '★ ';
-    font-size: 4vmin;
 }
 
 #star-rating label {
@@ -74,6 +37,7 @@ footer > h4 {
 #star-rating:hover > span:before {
     color: #f1f175;
 }
+
 /* Remove default radio display */
 #star-rating input[type=radio] {
     display: none;
@@ -82,6 +46,7 @@ footer > h4 {
 #star-rating > span:hover ~ span:before {
     color: black;
 }
+
 /* Handle rating click*/
 #star-rating input[type=radio]:checked ~ label {
     color: #c59b08
@@ -89,20 +54,21 @@ footer > h4 {
 
 /* Handle cursor hovering */
 #star-rating:not(:checked) > label:hover,
-#star-rating:not(:checked) > label:hover ~ label 
-{
+#star-rating:not(:checked) > label:hover ~ label {
     color: #755d05 !important;
 }
 
 #book {
     padding: 20px 20px;
-    flex-direction: row;
     flex-direction: column;
     row-gap: 30px;
     align-items: center;
     justify-content: right;
-    /* border: 5px solid black; */
     width: 30vw;
+}
+
+#book-rating > p {
+    font-size: 20px;
 }
 
 #synopsis {
@@ -115,7 +81,6 @@ footer > h4 {
     justify-content: space-between;
     align-items: center;
     overflow-y: scroll;
-    /* border: 5px solid black; */
     padding: 8px;
     width: 70%;
 }
@@ -134,7 +99,6 @@ ul {
 ul > li {
     display: flex;
     flex-direction: column;
-    /* border: 5px solid black; */
     padding: 10px;
 }
 
@@ -160,26 +124,6 @@ button {
 button:hover {
     background: #977d5c;
 }
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
 
 @media screen and (max-width: 600px)
   {
