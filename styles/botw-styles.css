@@ -1,3 +1,17 @@
+body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to bottom right, gainsboro, #FFFDD0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
 div {
     display: flex;
     flex: 1 1 auto;
