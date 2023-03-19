@@ -57,7 +57,7 @@ let interval = setInterval(() => {
 		}
 		lastFocused = Date.now();
 	}
-	console.log(current);
+	// console.log(current);
 }, 1000);
 
 //-----------------------------
@@ -99,7 +99,7 @@ function changeNavIcon() {
 }
 
 // Call on start and login/logout
-export function setNavElementVis(login, username) {
+function setNavElementVis(login, username) {
     // Logged in
     if (login) {
         document.getElementById("login").innerHTML = "Logout"

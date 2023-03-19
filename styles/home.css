@@ -23,13 +23,24 @@ body > children {
 
 header {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	border-bottom: 0.2rem solid rebeccapurple;
 	height: 8vh;
 	bottom: calc(100vh - 8vh);
 	z-index: 12;
 	background: whitesmoke;
 	justify-self: flex-start;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo {
+	flex: 1;
+	text-align: right;
+	padding-right: 0.5rem;
+	font: 800;
+	color-scheme: dark;
+	color: lab(40% 3 -10);
 }
 
 .navbar {
@@ -47,7 +58,7 @@ header {
 	flex-direction: column;
 }
 
-#filler {
+.spacer {
 	flex: 1 1 auto;
 }
 
