@@ -120,6 +120,10 @@ header {
 	color: black;
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
 
 .arrow {
 	position: absolute;

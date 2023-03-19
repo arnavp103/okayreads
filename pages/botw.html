@@ -4,14 +4,28 @@
         <meta charset="UTF-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/botw-styles.css">
         <link rel="stylesheet" href="../styles/utils.css">
+        <link rel="stylesheet" href="../styles/botw-styles.css">
         <title>Book of The Week</title>
     </head>
     <body>
-        <header>
+        <header class="sticky">
+            <div id="navbarToggle">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <h1 class="logo">okayreads</h1>
         </header>
         <div id="main-content">
+            <div id="navBar" class="navbar">
+                <!-- <a href="home.html">Home</a> -->
+                <a href="#" id="reviewpage">Reviews</a>
+                <a href="#" id="adminpage">Admin</a>
+                <div class="spacer"></div>
+                <a href="./login.html" id="login">Login</a>
+                <p id="welcome_msg">Welcome to Okayreads.<br>Please login.</p>
+            </div>
             <div id="book">
                 <img id="book-img" placeholder="no image found"/>
                 <div id="book-rating">
@@ -47,7 +61,7 @@
         <footer class="sticky">
             <h4><em>Made with ❤️ by Arnav Priyadarshi, Arwin Fong, & Eric Fan</em></h4>
         </footer>
-    <script type="module" src="/src/botw.js"></script>
-    <script src="../src/navbar.js"></script>
+    <script type="module" src="../src/botw.js"></script>
+	<script defer src="../src/navbar.js"></script>
     </body>
 </html>

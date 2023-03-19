@@ -3,43 +3,36 @@
       "title": "Lord Of the Rings",
       "author": "J. R. R. Tolkien",
       "synopsis": "In the mystical land of Middle-earth, a young hobbit named Frodo Baggins inherits a simple gold ring from his uncle Bilbo. He soon discovers that the ring is part of a set of three that were forged by the Dark Lord Sauron. The Dark Lord has sent his servants, the Nazgûl, to find the rings and destroy them. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the ring and foil the Dark Lord in his evil purpose.",
-      "image": "/assets/Lord of the Rings.jpg",
-      "rating": []
+      "image": "/assets/Lord of the Rings.jpg"
     },
     "2": {
       "title": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "synopsis": "Scout Finch lives with her brother, Jem, and their widowed father, Atticus, in the sleepy Alabama town of Maycomb. Maycomb is suffering through the Great Depression, but Atticus is a prominent lawyer and the Finch family is reasonably well off in comparison to the rest of society. One summer, Jem and Scout befriend a boy named Dill, who has come to live in their neighborhood for the summer, and the trio acts out stories together. Eventually, Dill becomes fascinated with the spooky house on their street called the Radley Place. The house is owned by Mr. Nathan Radley, whose brother, Arthur (nicknamed Boo), has lived there for years without venturing outside. Scout goes to school for the first time that fall and detests it. She and Jem find gifts apparently left for them in a knothole of a tree on the Radley property. Dill returns the following summer, and he, Scout, and Jem begin to act out the story of Boo Radley. Atticus puts a stop to their antics, urging the children to try to see life from another person’s perspective before making judgments. But, on Dill’s last night in Maycomb for the summer, the three sneak onto the Radley property, where Nathan Radley shoots at them. Jem loses his pants in the ensuing escape. When he returns for them, he finds them mended and hung over the fence.",
-      "image": "/assets/To Kill a Mockingbird.jpg",
-      "rating": []
+      "image": "/assets/To Kill a Mockingbird.jpg"
     },
     "3": {
       "title": "Willow",
       "author": "Julia Hoban",
       "synopsis": "A young girl named Willow is born with a curse that will cause her to die on her 16th birthday. Her mother, Queen Bavmorda, sends her away to be raised by a witch named Fin Raziel. When Willow turns 16, she is taken to the castle of the evil sorcerer, Sorsha, who wants to use her powers to destroy the world. But Willow escapes and is rescued by a group of warriors led by the sorcerer's brother, Madmartigan. Together, they must find a way to stop Sorsha before it's too late.",
-      "image": "/assets/Willow.jpeg",
-      "rating": []
+      "image": "/assets/Willow.jpeg"
     },
     "4": {
       "title": "The Perks of Being a Wallflower",
       "author": "Stephen Chbosky",
       "synopsis": "Charlie is a freshman. He's not terribly popular, but neither is he a wallflower--at least, not yet. He's hoping to break out of his shell by joining the school's swim team. He meets two seniors, Sam and Patrick, who befriend him. Through Sam and Patrick, Charlie meets a group of seniors who welcome him into their circle. But this newfound happiness is threatened by Charlie's ongoing struggles with depression and a secret he's harboring.",
-      "image": "/assets/The Perks of Being a Wallflower.jpg",
-      "rating": []
+      "image": "/assets/The Perks of Being a Wallflower.jpg"
     },
     "5": {
       "title": "Go As a River",
       "author": "Shelley Read",
       "synopsis": "When his mother dies, 12-year-old Willard and his father move from their home in Kentucky to a farm in Tennessee. There, Willard finds a new friend in a slave named Jim, who is being held in a shed on the farm. Willard and Jim form a bond that will last a lifetime. But when Willard's father sells Jim, Willard must make a decision that will change his life forever.",
-      "image": "/assets/Go As a River.webp",
-      "rating": []
+      "image": "/assets/Go As a River.webp"
     },
     "6": {
       "title": "The Croxxroxx",
       "author": "Harold Stein",
       "synopsis": "In the year 2093, the world is a dangerous place. The Croxxroxx, a group of super-powered criminals, rule the city of New York. The only hope for the city is the super-powered hero known as the Croxxroxx Hunter. But when the Hunter is killed, the city is left with no hope. It is up to a group of young heroes to take up the mantle of the Croxxroxx Hunter and save the city.",
-      "image": "/assets/The Croxxroxx.jpeg",
-      "rating": []
+      "image": "/assets/The Croxxroxx.jpeg"
     }
-
 }
