@@ -16,7 +16,7 @@ function init_navbar() {
     if (!checkLogin()) {
         document.getElementById("adminpage").style.display = "none"; // Remove "Admin"
         document.getElementById("login").innerText = "Login";
-        document.getElementById("welcome_msg").innerText = "Welcome to Okayreads.<br>Please login.";
+        document.getElementById("welcome_msg").innerHTML = "Welcome to Okayreads.<br>Please login.";
     }
     // User logged in
     else {
@@ -28,7 +28,7 @@ function init_navbar() {
         }
     }
 }
-    
+
 navbarButton.addEventListener("click", () => {
     changeNavIcon();
     toggleNavbar();
@@ -46,7 +46,6 @@ document.getElementById("login").addEventListener("click", () => {
 function toggleNavbar() {
     const navbar = document.getElementById("navBar");
     try {
-        changeNavIcon();
         if (navbar.style.width.localeCompare("0px") == 0 || navbar.style.width.localeCompare("") == 0) {
             // Expand navbar
             navbar.style.width = "200px";
@@ -67,23 +66,23 @@ function changeNavIcon() {
     navbarIcon.classList.toggle("change"); // Change navbar icon
 }
 
-// Call on start and login/logout
-function setNavElementVis(username) {
-    // Logged in
-    if (checkLogin()) {
-        document.getElementById("login").innerHTML = "Logout"
-        document.getElementById("login").href = "#" // Change to login page
-        document.getElementById("welcome_msg").textContent = "Welcome, ".concat(username);
-        document.getElementById("welcome_msg").style.visibility = "visible"; // Show welcome message
-        if (username.localeCompare("admin")) {
-            document.getElementById("adminpage").style.visibility = "visible"; // Only user "admin" should see "admin" option
-        }
-    }
-    // Logged out
-    else {
-        document.getElementById("login").innerHTML = "Logout"
-        document.getElementById("login").href = "#" // Change to login page
-        document.getElementById("welcome_msg").style.visibility = "collapse";
-        document.getElementById("adminpage").style.visibility = "collapse"
-    }
-}
+// // Call on start and login/logout
+// function setNavElementVis(username) {
+//     // Logged in
+//     if (checkLogin()) {
+//         document.getElementById("login").innerHTML = "Logout"
+//         document.getElementById("login").href = "#" // Change to login page
+//         document.getElementById("welcome_msg").textContent = "Welcome, ".concat(username);
+//         document.getElementById("welcome_msg").style.visibility = "visible"; // Show welcome message
+//         if (username.localeCompare("admin")) {
+//             document.getElementById("adminpage").style.visibility = "visible"; // Only user "admin" should see "admin" option
+//         }
+//     }
+//     // Logged out
+//     else {
+//         document.getElementById("login").innerHTML = "Logout"
+//         document.getElementById("login").href = "#" // Change to login page
+//         document.getElementById("welcome_msg").style.visibility = "collapse";
+//         document.getElementById("adminpage").style.visibility = "collapse"
+//     }
+// }

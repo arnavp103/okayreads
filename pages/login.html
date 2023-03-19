@@ -6,12 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Okayreads</title>
 	<link rel="stylesheet" href="/styles/login-styles.css">
+	<link rel="stylesheet" href="/styles/utils.css">
 	<script defer src="../src/login.js"></script>
 	<script defer src="../src/navbar.js"></script>
 </head>
 <body>
 	<header class="sticky">
-		<div id="navbarToggle" onclick="toggleNavbar()">
+		<div id="navbarToggle">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
@@ -20,7 +21,12 @@
 
 	<main>
 		<div id="navBar" class="navbar">
-			<p id="login-msg">Please login to continue</p>
+			<!-- <a href="home.html">Home</a> -->
+			<a href="#">Reviews</a>
+			<a href="#" id="adminpage">Admin</a>
+			<div class="spacer"></div>
+			<a href="./login.html" id="login">Login</a>
+			<p id="welcome_msg">Welcome to Okayreads.<br>Please login.</p>
 		</div>
 
 		<div id="login_box">

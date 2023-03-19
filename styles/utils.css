@@ -1,3 +1,6 @@
+.sticky {
+	position: sticky;
+}
 /* Header */
 
 header {
@@ -25,40 +28,77 @@ footer > h4 {
 	margin: auto;
 }
 
-/* Body */
-
-body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-flow: column wrap;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(to bottom right, gainsboro, #FFFDD0);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.spacer {
+	flex: 1 1 auto;
 }
 
-/* Custom Scroll */
+/* Navbar */
 
-    /* width */
-    ::-webkit-scrollbar {
-    width: 10px;
-    }
+.navbar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 10; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background: linear-gradient(to bottom right, rgb(71, 140, 237), #0b0161);
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px;
+	transition: 0.5s; /* 0.5 second transition */
+	display: flex;
+	flex-direction: column;
+}
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    }
+.navbar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #f1f1f1;
+	display: block;
+	transition: 0.3s;
+}
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: #888;
-    }
+.navbar a:hover {
+	color: #a4a1a1;
+}
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-    }
+/* Menu button */
+.navbarToggle {
+	display: inline-block;
+	cursor: pointer;
+	margin: 6px;
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	z-index: 11; /* Above navbar */
+}
 
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 5px;
+	transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+
+#welcome_msg {
+	margin-top: 10px;
+	margin-bottom: 6px;
+	font-size: 20px;
+	opacity: 0.4;
+	color: #f1f1f1;
+	text-align: center;
+}

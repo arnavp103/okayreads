@@ -11,8 +11,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(to bottom right, gainsboro, #fffdd0);
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-family: Avenir;
 }
 
 #login_box {
@@ -33,10 +32,6 @@ button {
     flex-grow: 0;
 }
 
-.sticky {
-	position: sticky;
-}
-
 header {
 	display: flex;
 	flex-direction: row;
@@ -46,83 +41,6 @@ header {
 	z-index: 12;
 }
 
-.navbar {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 10; /* Stay on top */
-	top: 0; /* Stay at the top */
-	left: 0;
-	background-color: #37b58b;
-	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 60px;
-	transition: 0.5s; /* 0.5 second transition */
-	display: flex;
-	flex-direction: column;
-    justify-content: center;
-}
-
-#login-msg {
-    margin: 5px
-}
-
-.navbar a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #5a5959;
-	display: block;
-	transition: 0.3s;
-}
-
-.navbar a:hover {
-	color: #f1f1f1;
-}
-
-/* Menu button */
-.navbarToggle {
-	display: inline-block;
-	cursor: pointer;
-	margin: 6px;
-	width: 10%;
-	height: fit-content;
-	position: absolute;
-	z-index: 11; /* Above navbar */
-}
-  
-.bar1, .bar2, .bar3 {
-	width: 35px;
-	height: 5px;
-	background-color: #333;
-	margin: 6px 5px;
-	transition: 0.4s;
-}
-  
-/* Rotate first bar */
-.change .bar1 {
-	transform: translate(0, 11px) rotate(-45deg);
-}
-  
-/* Fade out second bar */
-.change .bar2 {opacity: 0;}
-  
-/* Rotate last bar */
-.change .bar3 {
-	transform: translate(0, -11px) rotate(45deg);
-}
-
-#adminpage {
-	visibility: hidden;
-}
-
-#welcome-msg {
-	font-size: 16px;
-	opacity: 0.4;
-}
-
-@media screen and (max-height: 450px) {
-	/* For when dimensions too small */
-}
 
 footer {
 	display: flex;
