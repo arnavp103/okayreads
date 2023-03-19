@@ -1,0 +1,64 @@
+/* Header */
+
+header {
+    border-bottom: 5px solid black;
+    height: 8vh;
+    bottom: calc(100vh - 8vh);
+    background-color: burlywood;
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	flex-direction: row;
+	border-top: 0.2rem solid black;
+	justify-content: center;
+	justify-self: center;
+	height: 8vh;
+	top: calc(100vh - 8vh);
+    background-color: burlywood;
+}
+
+footer > h4 {
+	line-height: 1.5rem;
+	margin: auto;
+}
+
+/* Body */
+
+body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to bottom right, gainsboro, #FFFDD0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Custom Scroll */
+
+    /* width */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+

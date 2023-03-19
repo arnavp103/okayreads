@@ -1,0 +1,43 @@
+div {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+#main-content {
+    flex-direction: row;
+    height: 10%;
+    width: 100vw;
+}
+
+#book-rating > p {
+    font-size: 20px;
+}
+
+#book {
+    padding: 20px 20px;
+    width: 50vw;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: right;
+}
+
+#review{
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 50vw;
+}
+
+#book img {
+    width: 200px;
+}
+
+@media screen and (max-width: 600px)
+  {
+    #book {
+        display: none;
+    }
+    #book-info {
+        width: 100%;
+    }
+}
