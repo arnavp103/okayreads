@@ -11,13 +11,9 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-div {
+#main-content {
     display: flex;
     flex: 1 1 auto;
-}
-
-#main-content {
     flex-direction: row;
     height: 10%;
     width: 100vw;
@@ -36,12 +32,20 @@ div {
 }
 
 #book {
+    display: flex;
+    flex: 1 1 auto;
     padding: 20px 20px;
     width: 50vw;
     flex-direction: column;
     row-gap: 30px;
     align-items: center;
     justify-content: right;
+}   
+
+#book-rating {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
 }
 
 #review{
@@ -59,7 +63,7 @@ div {
     #book {
         display: none;
     }
-    #book-info {
+    #review {
         width: 100%;
     }
 }

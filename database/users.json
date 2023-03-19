@@ -1,10 +1,38 @@
 {
     "1": {
+        "username": "admin",
+        "password": "admin"
+    },
+    "2": {
         "username": "name",
         "password": "pw"
     },
-    "2": {
-        "username": "admin",
-        "password": "admin"
+    "3": {
+        "username": "Alice",
+        "password": "alice1"
+    },
+    "4": {
+        "username": "Bob",
+        "password": "bob1"
+    },
+    "5": {
+        "username": "Curtis",
+        "password": "curtis1"
+    },
+    "6": {
+        "username": "Justin",
+        "password": "justin1"
+    },
+    "7": {
+        "username": "Ethan",
+        "password": "ethan1"
+    },
+    "8": {
+        "username": "Joe",
+        "password": "joe1"
+    },
+    "9": {
+        "username": "Herald",
+        "password": "herald1"
     }
 }

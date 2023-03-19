@@ -148,7 +148,7 @@ footer > h4 {
         justify-self: center;
         height: 8vh;
         top: calc(100vh - 8vh);
-        background-color: burlywood;
+        background-color: whitesmoke;
         font-size: 14px;
     }
 }
