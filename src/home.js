@@ -1,15 +1,42 @@
 "use strict";
 
+import booksJSON from "/database/books.json" assert { type: 'json' };
+
 // carousel_controls
 const arrows = document.querySelectorAll(".arrow");
 const carousel = document.querySelector(".carousel-inner");
+
+// --- populate carousel -----
+/// order is a list of book ids in the same order as the carousel
+/// eg. ["1", "2"] -> ["Lord of the Rings", "To Kill a Mockingbird"]
+function populate(order) {
+	for (const key of order) {
+		const book = booksJSON[key];
+		const section = document.createElement("section");
+		section.classList.add("book-card");
+		section.setAttribute("data-name", book.title);
+		section.innerHTML = `
+			<img src="${book.image}" alt="${book.title}">
+			<div class="highlight synopsis">${book.synopsis}</div>
+			<div class="redirects">
+				<button>Reviews</button>
+			</div>
+		`;
+		carousel.appendChild(section);
+	}
+}
+
+if (!localStorage.getItem("order")) {
+	const defaultOrder = ["1", "3", "4", "5", "6"];
+	populate(defaultOrder);
+} else {
+	const order = localStorage.getItem("order");
+	populate(order);
+}
+// ----------------------------
 const books = document.querySelectorAll(".book-card");
 
-for (const book of books) {
-    book.style.background = `rgb(${Math.random() * 255}, ${
-        Math.random() * 255
-	}, ${Math.random() * 255})`;
-}
+
 
 //-- auto scroll carousel -----
 const duration = 2500;

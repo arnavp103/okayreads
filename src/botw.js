@@ -1,3 +1,5 @@
+"use strict";
+
 import booksJSON from "/database/books.json" assert { type: 'json' };
 
 const reviewCount = document.querySelector("#review-count");
@@ -45,7 +47,7 @@ function calculateRating (){
 
     if (avgScore == 0) {        // No reviews
         updateReview(0);
-    } 
+    }
     else {
         updateReview((avgScore / booksJSON[id].rating.length).toFixed(1));
     }
@@ -72,7 +74,7 @@ function loadPage() {
 // Load book information to page
 function loadBook() {
      id = getBookID();
-    
+
     document.title = booksJSON[id].title;
     bookTitle.innerHTML = booksJSON[id].title;
     bookImage.src = booksJSON[id].image;
