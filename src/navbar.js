@@ -20,6 +20,7 @@ function init_navbar() {
     }
     // User logged in
     else {
+        document.getElementById("adminpage").style.display = "none"; // Remove "Admin"
         document.getElementById("login").innerText = "Logout";
         document.getElementById("welcome_msg").innerText = "Welcome " + localStorage.getItem("activeUser"); // Set welcome message
         // Admin login
