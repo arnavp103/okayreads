@@ -184,22 +184,25 @@ header {
 	flex-direction: column;
 	justify-content: space-between;
 	text-align: center;
+	font-family: Helvetica Neue, sans-serif;
+	line-height: 1.5em;
+	font-size: 1.1em;
 }
 
-.description > h3 {
+/* .description > h3 {
 	font-size: 1.5rem;
-}
+	font-weight: 200;
+} */
 
-.checkout {
+.redirects {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	grid-area: info;
-
 }
 
-.checkout > button {
+.redirects > button {
 	padding: 0.5rem 1rem;
 	border: none;
 	border-radius: 0.5rem;
