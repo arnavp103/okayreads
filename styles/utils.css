@@ -101,4 +101,36 @@ footer > h4 {
 	opacity: 0.4;
 	color: #f1f1f1;
 	text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 450px) {
+	/* For when dimensions too small */
+    .navbar {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 10; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background: linear-gradient(to bottom right, rgb(71, 140, 237), #0b0161);
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 50px;
+        transition: 0.5s; /* 0.5 second transition */
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        border-top: 0.2rem solid black;
+        justify-content: center;
+        justify-self: center;
+        height: 8vh;
+        top: calc(100vh - 8vh);
+        background-color: burlywood;
+        font-size: 14px;
+    }
 }

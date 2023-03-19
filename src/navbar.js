@@ -47,14 +47,37 @@ document.getElementById("login").addEventListener("click", () => {
 function toggleNavbar() {
     const navbar = document.getElementById("navBar");
     try {
-        if (navbar.style.width.localeCompare("0px") == 0 || navbar.style.width.localeCompare("") == 0) {
-            // Expand navbar
-            navbar.style.width = "200px";
+        // Mobile view
+        if (window.innerWidth <= 450) {
+            navbar.style.width = "100%";
+            if (navbar.style.height.localeCompare("100%") == 0) {
+                navbar.style.height = "0px";
+            }
+            if (navbar.style.height.localeCompare("0px") == 0 || navbar.style.height.localeCompare("") == 0) {
+                // Expand navbar
+                navbar.style.height = "300px";
+            }
+            else {
+                // Collapse navbar
+                navbar.style.height = "0px";
+            }
         }
+        // Desktop view
         else {
-            // Collapse navbar
-            navbar.style.width = "0";
+            navbar.style.height = "100%";
+            if (navbar.style.width.localeCompare("100%") == 0) {
+                navbar.style.width = "0px";
+            }
+            if (navbar.style.width.localeCompare("0px") == 0 || navbar.style.width.localeCompare("") == 0) {
+                // Expand navbar
+                navbar.style.width = "200px";
+            }
+            else {
+                // Collapse navbar
+                navbar.style.width = "0px";
+            }
         }
+        console.log(navbar.style.height);
     }
     catch (e) {
         console.log(e.message);

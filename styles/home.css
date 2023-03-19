@@ -40,10 +40,6 @@ header {
 	font-family: Verdana, sans-serif;
 }
 
-@media screen and (max-height: 450px) {
-	/* For when dimensions too small */
-}
-
 .carousel {
 	margin: 1rem;
 	display: flex;
