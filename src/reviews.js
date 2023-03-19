@@ -24,12 +24,18 @@ function loadReviews() {
         };
     }
     for (let i = 0; i < book.reviews.user.length; i++) {
-        reviewList.innerHTML += `<li>
-        <p class="username">${book.reviews.user[i]}<p>
-        <p class="review">${book.reviews.review[i]}<p>
-        <li>
-        `    
+        var li = document.createElement("li");
+        var user = document.createElement("p");
+        var review = document.createElement("p");
+        user.setAttribute("class", "username");
+        user.appendChild(document.createTextNode(book.reviews.user[i] + "'s review:"));
+        li.appendChild(user);
+        review.setAttribute("class", "review-item");
+        review.appendChild(document.createTextNode(book.reviews.review[i]));
+        li.appendChild(review);
+        reviewList.appendChild(li); 
     }
+    console.log(reviewList.innerHTML);
 }
 
 // Calculate the average rating for the book with ID id
