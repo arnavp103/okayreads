@@ -31,28 +31,32 @@ function submitReview(){
     // Get new star rating at the time of review submission
     stars = document.querySelector('input[name="rating"]:checked');
     const activeUser = window.localStorage.getItem("activeUser");
-    if (reviewField.value == "") {
-        // Give user an error message
-        alert("Please write a review before submitting.")
+    if (activeUser == null) {
+        alert("Please log in before submitting a review");
     }
     else {
-        // Save to review local storage
-        console.log(activeUser);
-        var i = reviewHasNoValue(book.reviews.user, activeUser);
-        if (i != -1){
-            book.reviews.user[i] = activeUser;
-            book.reviews.review[i] = reviewField.value;
-            book.reviews.rating[i] = parseInt(stars.value);
+        if (reviewField.value == "") {
+            // Give user an error message
+            alert("Please write a review before submitting.")
         }
         else {
-            book.reviews.user[book.reviews.user.length] = activeUser;
-            book.reviews.review[book.reviews.review.length] = reviewField.value;
-            book.reviews.rating[book.reviews.rating.length] = parseInt(stars.value);
+            // Save to review local storage
+            var i = reviewHasNoValue(book.reviews.user, activeUser);
+            if (i != -1){
+                book.reviews.user[i] = activeUser;
+                book.reviews.review[i] = reviewField.value;
+                book.reviews.rating[i] = parseInt(stars.value);
+            }
+            else {
+                book.reviews.user[book.reviews.user.length] = activeUser;
+                book.reviews.review[book.reviews.review.length] = reviewField.value;
+                book.reviews.rating[book.reviews.rating.length] = parseInt(stars.value);
+            }
+            reviewField.value = "";
+            window.localStorage.setItem(booksJSON[id].title, JSON.stringify(book));
         }
-        reviewField.value = "";
-        window.localStorage.setItem(booksJSON[id].title, JSON.stringify(book));
+        calculateRating();
     }
-    calculateRating();
 }
 
 function reviewHasNoValue (user_arr, username){
@@ -127,7 +131,6 @@ function loadPage() {
 // Load book information to page
 function loadBook() {
     id = getBookID();
-    console.log(id);
 
     document.title = booksJSON[id].title;
     bookTitle.innerHTML = booksJSON[id].title;
