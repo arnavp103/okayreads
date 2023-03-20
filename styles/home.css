@@ -10,24 +10,11 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(to bottom right, gainsboro, #feeefa);
-	font-family: Avenir;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 body > children {
 	width: 100%;
-}
-
-header {
-	display: flex;
-	flex-direction: row;
-	border-bottom: 0.2rem solid rebeccapurple;
-	height: 8vh;
-	bottom: calc(100vh - 8vh);
-	z-index: 12;
-	background: whitesmoke;
-	justify-self: flex-start;
-	justify-content: space-around;
-	align-items: center;
 }
 
 .carousel {
@@ -62,36 +49,55 @@ header {
 	height: 100%;
 	padding: 2rem;
 	flex: 1 0 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-template-areas:
-		"img description"
-		"img info";
-	gap: 1rem 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	justify-items: center;
+	align-items: stretch;
+
 	z-index: 2;
 	border-radius: 2.5em;
 	background-color: seashell;
-	align-items: stretch;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+	sans-serif;
+};
+
+/* @media screen and (max-width: 450px) { */
+
+.img-container {
+	grid-area: img;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 100%;
 }
 
+
 .book-card > img {
-	grid-area: img;
-	width: auto;
 	height: 100%;
-	align-self: center;
-	justify-self: center;
+	width: auto;
+	overflow: hidden;
+	margin: auto;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 50%;
 }
 
 .synopsis {
-	grid-area: description;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	text-align: center;
-	font-family: Helvetica Neue, sans-serif;
 	line-height: 1.5em;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 /* .description > h3 {
@@ -104,7 +110,15 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	grid-area: info;
+	flex: 1;
+	margin-bottom: 2rem;
+	justify-self: flex-end;
+}
+
+.redirects  a {
+	text-decoration: none;
+	color: white;
+	justify-self: center;
 }
 
 .redirects > button {
@@ -117,13 +131,10 @@ header {
 	cursor: pointer;
 	transition: ease-out color 200ms;
 	margin: auto;
-	color: black;
+
 }
 
-a {
-	text-decoration: none;
-	color: white;
-}
+
 
 .arrow {
 	position: absolute;

@@ -60,16 +60,16 @@ footer > h4 {
 	left: 0;
 	background: linear-gradient(to bottom right, rgb(71, 140, 237), #0b0161);
 	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 60px;
+	padding-top: 5rem;
 	transition: 0.5s; /* 0.5 second transition */
 	display: flex;
 	flex-direction: column;
 }
 
 .navbar a {
-	padding: 8px 8px 8px 32px;
+	padding: 0.8rem 0.8rem 0.8rem 2.8rem;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 2rem;
 	color: #f1f1f1;
 	display: block;
 	transition: 0.3s;
@@ -82,18 +82,21 @@ footer > h4 {
 /* Menu button */
 .navbarToggle {
 	display: flex;
-	cursor: pointer;
-	margin: 6px;
+	margin: 0.5rem;
+	margin-left: 0.2rem;
 	width: 10%;
 	height: 100%;
 	position: absolute;
 	z-index: 11; /* Above navbar */
     flex-direction: column;
 }
+.navbarToggle:hover {
+	cursor: pointer;
+}
 
 .bar1, .bar2, .bar3 {
-	width: 35px;
-	height: 5px;
+	width: 3em;
+	height: 0.35em;
 	background-color: #333;
 	margin: 6px 5px;
 	transition: 0.4s;

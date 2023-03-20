@@ -1,0 +1,84 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100vw;
+	background: linear-gradient(to bottom right, gainsboro, #feeefa);
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.selector {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 100%;
+}
+
+#results {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.queue {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 75%;
+	align-self: center;
+	justify-self: center;
+}
+
+#submit {
+	background: #fefefe;
+	color: #111;
+	border: 1px solid #000;
+	text-decoration: none;
+	border-radius: 2em;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	margin: 0.5rem;
+	font-size: larger;
+	justify-self: flex-end;
+}
+
+.button:hover {
+	color: lab(40% 3 -10);
+	transition: ease-in-out 0.3s;
+}
+
+#picker {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: center;
+	align-content: baseline;
+	flex: 1 0 100%;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	padding: 1rem;
+}
+
+.book {
+	max-width: 5rem;
+	height: auto;
+	margin: 2rem;
+}
+
+.book:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: ease-out 0.3s;
+}

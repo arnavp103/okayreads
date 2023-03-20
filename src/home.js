@@ -11,21 +11,27 @@ const carousel = document.querySelector(".carousel-inner");
 /// eg. ["1", "2"] -> ["Lord of the Rings", "To Kill a Mockingbird"]
 function populate(order) {
 	for (const key of order) {
+		console.log(key);
 		const book = booksJSON[key];
+		console.log(book);
 		const section = document.createElement("section");
 		section.classList.add("book-card");
 		section.setAttribute("data-name", book.title);
 		section.innerHTML = `
-			<a href="./botw.html" name="${book.title}">
-				<img src="${book.image}" alt="${book.title}">
-			</a>
-			<div class="highlight synopsis">${book.synopsis}</div>
-			<div class="redirects">
-			<button>
-				<a href="./reviews.html" name="${book.title}">	
-					Reviews
+			<div class="img-container">
+				<a href="./botw.html" name="${book.title}">
+					<img src="${book.image}" alt="${book.title}">
 				</a>
-			</button>
+			</div>
+			<div class="info">
+				<div class="highlight synopsis">${book.synopsis}</div>
+				<div class="redirects">
+				<button>
+					<a href="./reviews.html" name="${book.title}">
+						Reviews
+					</a>
+				</button>
+				</div>
 			</div>
 		`;
 		carousel.appendChild(section);
@@ -36,7 +42,8 @@ if (!localStorage.getItem("order")) {
 	const defaultOrder = ["1", "3", "4", "5", "6"];
 	populate(defaultOrder);
 } else {
-	const order = localStorage.getItem("order");
+	const order = JSON.parse(localStorage.getItem("order"));
+
 	populate(order);
 }
 // ----------------------------
@@ -69,23 +76,23 @@ function isInViewport(elem) {
 	);
 }
 
-let interval = setInterval(() => {
-	if (Date.now() - lastFocused > duration) {
-		current = Array.from(books).findIndex(book => isInViewport(book));
-		if (current < books.length - 1) {
-			arrows[1].click();
-			current++;
-		} else {
-			for(const _ of books) {
-				const dx = books[0].clientWidth;
-				carousel.scrollLeft -= books.length * dx;
-			}
-			current = 0;
-		}
-		lastFocused = Date.now();
-	}
-	// console.log(current);
-}, 1000);
+// let interval = setInterval(() => {
+// 	if (Date.now() - lastFocused > duration) {
+// 		current = Array.from(books).findIndex(book => isInViewport(book));
+// 		if (current < books.length - 1) {
+// 			arrows[1].click();
+// 			current++;
+// 		} else {
+// 			for(const _ of books) {
+// 				const dx = books[0].clientWidth;
+// 				carousel.scrollLeft -= books.length * dx;
+// 			}
+// 			current = 0;
+// 		}
+// 		lastFocused = Date.now();
+// 	}
+// 	// console.log(current);
+// }, 1000);
 
 //-----------------------------
 arrows[0].addEventListener("click", () => {

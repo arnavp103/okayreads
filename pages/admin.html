@@ -4,14 +4,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/admin.css">
-	<link rel="stylesheet" href="styles/utils.css">
-	<script defer src="../src/admin.js"></script>
+	<link rel="stylesheet" href="/styles/admin.css">
+	<link rel="stylesheet" href="/styles/utils.css">
+	<script type="module" defer src="../src/admin.js"></script>
+	<script defer src="../src/navbar.js"></script>
 	<title>Admin</title>
 </head>
 <body>
 	<header class="sticky">
-		<div id="navbarToggle" onclick="toggleNavbar()">
+		<div id="navbarToggle">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
@@ -20,6 +21,25 @@
 	</header>
 
 	<main>
+		<div id="navbar" class="navbar">
+			<a href="home.html" id="homepage">Home</a>
+			<a href="#" id="adminpage">Admin</a>
+			<div class="spacer"></div>
+				<a href="./login.html" id="login">Login</a>
+				<p id="welcome_msg">Welcome to Okayreads.<br>Please login.</p>
+			</div>
+
+		<div class="selector">
+			<section id="results">
+				<div class="queue"></div>
+				<a href="home.html" id="submit">Submit</a>
+			</section>
+
+			<section id="picker">
+
+			</section>
+
+		</div>
 
 	</main>
 
