@@ -53,7 +53,7 @@ document.getElementById("login").addEventListener("click", () => {
 function toggleNavbar() {
     try {
         // Mobile view
-        if (window.innerWidth <= 450) {
+        if (window.innerWidth <= 480) {
             navbar.style.paddingTop = (document.querySelector("header").offsetHeight).toString() + "px";
             navbar.style.width = "100%";
             if (navbar.style.height.localeCompare("100%") == 0) {
