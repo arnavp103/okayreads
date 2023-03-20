@@ -2,15 +2,15 @@
 
 const navbar = document.getElementById("navbar");
 const navbarButton = document.getElementById("navbarToggle");
-    
-    
+
+
 window.onload = init_navbar();
 
 function checkLogin() {
     // User logged in
     return localStorage.getItem("activeUser") != null;
 }
-    
+
 function init_navbar() {
     // Init links
     document.getElementById("homepage").href = "/pages/home.html";
@@ -22,7 +22,7 @@ function init_navbar() {
     if (!checkLogin()) {
         document.getElementById("adminpage").style.display = "none"; // Remove "Admin"
         document.getElementById("login").innerText = "Login";
-        document.getElementById("welcome_msg").innerHTML = "Welcome to Okayreads.<br>Please login.";
+        document.getElementById("welcome_msg").innerHTML = "Welcome to okayreads.<br>Please login.";
     }
     // User logged in
     else {
