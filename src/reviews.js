@@ -35,7 +35,6 @@ function loadReviews() {
         li.appendChild(review);
         reviewList.appendChild(li); 
     }
-    console.log(reviewList.innerHTML);
 }
 
 // Calculate the average rating for the book with ID id
