@@ -81,13 +81,8 @@ body {
     width: 30vw;
 }
 
-#book-rating {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-}
-
-#book-rating > p {
+#book-rating p {
+    display: inline;
     font-size: 20px;
 }
 

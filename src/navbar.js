@@ -97,23 +97,3 @@ function changeNavIcon() {
     const navbarIcon = document.getElementById("navbarToggle");
     navbarIcon.classList.toggle("change"); // Change navbar icon
 }
-// // Call on start and login/logout
-// function setNavElementVis(username) {
-//     // Logged in
-//     if (checkLogin()) {
-//         document.getElementById("login").innerHTML = "Logout"
-//         document.getElementById("login").href = "#" // Change to login page
-//         document.getElementById("welcome_msg").textContent = "Welcome, ".concat(username);
-//         document.getElementById("welcome_msg").style.visibility = "visible"; // Show welcome message
-//         if (username.localeCompare("admin")) {
-//             document.getElementById("adminpage").style.visibility = "visible"; // Only user "admin" should see "admin" option
-//         }
-//     }
-//     // Logged out
-//     else {
-//         document.getElementById("login").innerHTML = "Logout"
-//         document.getElementById("login").href = "#" // Change to login page
-//         document.getElementById("welcome_msg").style.visibility = "collapse";
-//         document.getElementById("adminpage").style.visibility = "collapse"
-//     }
-// }
