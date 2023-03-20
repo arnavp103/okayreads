@@ -118,12 +118,13 @@ footer > h4 {
 #welcome_msg {
 	margin-top: 10px;
 	margin-bottom: 6px;
-	font-size: 20px;
+	font-size: 16px;
 	opacity: 0.4;
 	color: #f1f1f1;
 	text-align: center;
     overflow: hidden;
     white-space: nowrap;
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 480px) {
