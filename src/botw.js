@@ -38,7 +38,7 @@ function submitReview(){
     else {
         // Save to review local storage
         console.log(activeUser);
-        var i = reviewHasNoValue(book.reviews.user, activeUser)
+        var i = reviewHasNoValue(book.reviews.user, activeUser);
         if (i != -1){
             book.reviews.user[i] = activeUser;
             book.reviews.review[i] = reviewField.value;
@@ -110,7 +110,7 @@ function updateReview (avgScore){
 // Get the ID of the book to display
 function getBookID() {
     const keys = Object.keys(booksJSON);
-    for (let i = 1; i < keys.length; i++){
+    for (let i = 1; i < keys.length + 1; i++){
         if (booksJSON[i].title == window.localStorage.getItem("Title")) {
             return i;
         }
@@ -126,7 +126,8 @@ function loadPage() {
 
 // Load book information to page
 function loadBook() {
-     id = getBookID();
+    id = getBookID();
+    console.log(id);
 
     document.title = booksJSON[id].title;
     bookTitle.innerHTML = booksJSON[id].title;
