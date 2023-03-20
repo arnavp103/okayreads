@@ -26,6 +26,7 @@ function populate(order) {
 			<div class="info">
 				<div class="highlight synopsis">${book.synopsis}</div>
 				<div class="redirects">
+				<div class="spacer"></div>
 				<button>
 					<a href="./reviews.html" name="${book.title}">
 						Reviews

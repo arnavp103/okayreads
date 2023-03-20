@@ -74,8 +74,12 @@ body > children {
 	flex: 1 0 100%;
 }
 
+.img-container a {
+	justify-self: center;
+	justify-content: center;
+}
 
-.book-card > img {
+.book-card img {
 	height: 100%;
 	width: auto;
 	overflow: hidden;
@@ -107,18 +111,15 @@ body > children {
 
 .redirects {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
 	flex: 1;
-	margin-bottom: 2rem;
 	justify-self: flex-end;
 }
 
-.redirects  a {
+.redirects a {
 	text-decoration: none;
 	color: white;
-	justify-self: center;
 }
 
 .redirects > button {
@@ -131,7 +132,8 @@ body > children {
 	cursor: pointer;
 	transition: ease-out color 200ms;
 	margin: auto;
-
+	justify-self: flex-end;
+	margin-bottom: 2rem;
 }
 
 
