@@ -191,3 +191,18 @@ footer > h4 {
 	line-height: 1.5rem;
 	margin: auto;
 }
+
+@media screen and (max-width: 600px) {
+	.book-card {
+		flex-direction: column;
+		align-items: center;
+		overflow-y: scroll;
+	}
+	.img-container {
+		margin-top: 80vh;
+	}
+	.info > .highlight-synopsis {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
