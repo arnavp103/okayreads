@@ -31,9 +31,7 @@ function setQueueEventListeners() {
 
 
 // clear local storage and write new data for carousel
-function clearAndSet(order) {
-	localStorage.clear();
-	console.log(order);
+function set(order) {
 	localStorage.setItem("order", JSON.stringify(order));
 }
 
@@ -44,7 +42,7 @@ submit.addEventListener("click", () => {
 
 	imgs.forEach(img => order.push(img.getAttribute("data-key")));
 
-	clearAndSet(order);
+	set(order);
 });
 
 
