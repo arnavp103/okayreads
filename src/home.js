@@ -77,23 +77,23 @@ function isInViewport(elem) {
 	);
 }
 
-// let interval = setInterval(() => {
-// 	if (Date.now() - lastFocused > duration) {
-// 		current = Array.from(books).findIndex(book => isInViewport(book));
-// 		if (current < books.length - 1) {
-// 			arrows[1].click();
-// 			current++;
-// 		} else {
-// 			for(const _ of books) {
-// 				const dx = books[0].clientWidth;
-// 				carousel.scrollLeft -= books.length * dx;
-// 			}
-// 			current = 0;
-// 		}
-// 		lastFocused = Date.now();
-// 	}
-// 	// console.log(current);
-// }, 1000);
+let interval = setInterval(() => {
+	if (Date.now() - lastFocused > duration) {
+		current = Array.from(books).findIndex(book => isInViewport(book));
+		if (current < books.length - 1) {
+			arrows[1].click();
+			current++;
+		} else {
+			for(const _ of books) {
+				const dx = books[0].clientWidth;
+				carousel.scrollLeft -= books.length * dx;
+			}
+			current = 0;
+		}
+		lastFocused = Date.now();
+	}
+	// console.log(current);
+}, 1000);
 
 //-----------------------------
 arrows[0].addEventListener("click", () => {
